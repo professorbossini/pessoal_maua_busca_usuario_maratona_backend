@@ -21,7 +21,8 @@ export class AppController {
 
   @Get('dados_para_maratona')
   getLoginData (@Req() request: Request){
-    console.log (request.body.loginData)
-    return this.appService.getLoginData(request.body.loginData)
+    console.log(new Date().toLocaleString())
+    console.log(request.query.termoDeBusca)
+    return this.appService.getLoginData(request.query.termoDeBusca as string)
   }
 }

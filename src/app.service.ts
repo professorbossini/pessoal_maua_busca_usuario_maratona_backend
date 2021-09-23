@@ -23,7 +23,11 @@ export class AppService {
     return dados
           .filter (dado => dado.userfullname.includes(termoDeBusca))
           .map (dado => {
-            return {username: dado.username, userpassword: dado.userpassword}
+            return {
+              userfullname: dado.userfullname,
+              username: dado.username, 
+              userpassword: dado.userpassword
+            }
           })
 
   }
